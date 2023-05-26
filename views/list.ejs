@@ -1,0 +1,20 @@
+<%- include("header") -%>
+<div class="box" id="heading">
+    <h1><%= listTitle %></h1>
+    </div>
+    <div class="box">
+      <!-- every time you enter an item, it creates another list for then index picks a string from the array and input it -->
+      <!-- newItemsList =["another", "nnnnn"] -->
+      <% for (let index = 0; index < newListItems.length; index++) { %>
+      <div class="item">
+        <input type="checkbox" name="" value="">
+        <p class="last-child"><%= newListItems[index] %></p>
+      </div>
+      <% } %>
+      <form class="item" action="/" method="post">
+        <input name="listInput" type="text" placeholder="New Item" autocomplete="off"/>
+        <button type="submit" name="list" value=<%= listTitle %>>+</button>
+      </form>
+    </div>
+    <%- include("footer") -%>
+
